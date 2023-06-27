@@ -1,0 +1,671 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@100&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+    animation: entrance 1 1200ms ease-out;
+    -webkit-animation: entrance 1 3200ms ease-out;
+}
+@keyframes entrance{
+    from{
+        clip-path: circle(0.3% at 0 0);
+    }
+    to{
+        clip-path: circle(141.4% at 0 0);
+    }
+}
+html, body {
+    overflow-x: hidden;
+  }
+  /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+header{
+    background-image: url(../assets/Home-pic.png);
+    background-size: 100% 100%;
+    height:100vh;
+    width:100%;
+}
+nav{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    height:20vh;
+}
+.com-name{
+    display: none;
+}
+.burger{
+    display: none;
+    flex-direction: column;
+    gap:.25rem;
+}
+.burger span{
+    width:35px;
+    height:5px;
+    background-color: #fff;
+}
+  
+nav ul{
+    float: right;
+    display: flex;
+    gap:1rem;
+    padding:1rem;
+}
+nav ul li{
+    padding:1rem;
+
+}
+
+nav ul li a{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #000;
+    font-size: 1.25em;
+
+}
+.web-title{
+    opacity:0;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    width:35vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:.5rem 1rem;
+    animation: web-title 1s 350ms forwards linear;
+    -webkit-animation: web-title 1s 350ms forwards linear;
+}
+@keyframes web-title{
+    from{
+        transform: translateY(-50px);
+        -webkit-transform: translateY(-50px);
+        -moz-transform: translateY(-50px);
+        -ms-transform: translateY(-50px);
+        -o-transform: translateY(-50px);
+}
+    to{
+        transform: translateY(0);
+        opacity:1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+.web-title h1{
+    font-family: 'Poppins';
+    font-size: 5em;
+    text-shadow: 5px 5px grey;
+}
+.line2{
+    width:100%;
+}
+.web-title p{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+.spa{
+    margin-bottom: .75rem;
+}
+.web-title p:last-child{
+    text-align: justify;
+
+}
+.web-title span{
+    text-shadow: 3px 3px grey;
+    font-family: 'Dancing Script', Arial, Helvetica, sans-serif;
+    font-size: 3em;
+}
+.check{
+    cursor: pointer;
+    border-radius:10px;
+    margin-top: 1rem;
+    width:150px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding:.5rem 1rem;
+    background-color: #142d4c;
+    border: none;
+    color:white;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    transition: all 500ms;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+    animation: check 1 1200ms ease forwards alternate-reverse;
+    -webkit-animation: check infinite 1200ms linear forwards alternate-reverse;
+}
+
+@keyframes check{
+    from{
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+}
+    to{
+        transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+        -moz-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        -o-transform: translateY(5px);
+}
+    }
+.check:hover{
+    background-color: rgb(60, 58, 58);
+    scale:1.1;
+}
+
+#about{
+    min-height: auto;
+    display: flex;
+    padding: 1rem 0;
+    background-color: #ececec;
+    
+}
+
+.about-desc,.about-pics{
+    width:50%;
+}
+.pic1{
+    border-radius: 100px 0 100px 0;
+    width:500px;
+    background-image: url(../assets/about-1.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin:1rem;
+    height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 100px 0 100px 0;
+    -moz-border-radius: 100px 0 100px 0;
+    -ms-border-radius: 100px 0 100px 0;
+    -o-border-radius: 100px 0 100px 0;
+}
+.pic2{
+    border-radius: 0 100px 0 100px;
+    width:500px;
+    background-image: url(../assets/about-2.png);
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin:1rem;
+    height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 0 100px 0 100px;
+    -moz-border-radius: 0 100px 0 100px;
+    -ms-border-radius: 0 100px 0 100px;
+    -o-border-radius: 0 100px 0 100px;
+}
+.pic1 p,.pic2 p{
+    text-shadow: 2px 2px grey;
+    transform: translateX(5%);
+    font-size: 2em;
+    color:white;
+    font-family: 'Dancing Script', Arial, Helvetica, sans-serif;
+    -webkit-transform: translateX(5%);
+    -moz-transform: translateX(5%);
+    -ms-transform: translateX(5%);
+    -o-transform: translateX(5%);
+}
+.about-desc{
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    gap:.5rem;
+}
+.about-desc span{
+    text-shadow: 2px 2px grey;
+    font-size: 3em;
+    font-family: 'Dancing Script', arial;
+}
+.about-desc img{
+    margin:0 auto;
+    width:60%;
+}
+.about-desc h1{
+    text-shadow: 1px 1px grey;
+    text-align: center;
+    font-family: 'Dancing Script', Arial, Helvetica, sans-serif;
+    font-size: 3em;
+}
+
+.about-desc p{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+#services{
+    background-color: #9fd3c7;
+    height:auto;
+    width:100%;
+    padding:1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.offers{
+    display: flex;
+    gap:1rem;
+    justify-content: center;
+}
+#services h1{
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 2em;
+    color:#053d30;
+    font-weight: 900;
+}
+#services img{
+    width:15vw;
+}
+#services p{
+    font-weight: 600;
+    text-align: center;
+    color: #053d30;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+#services h2{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color:#053d30;
+}
+.massage, .facial, .pedicure, .makeup{
+    height:60vh;
+    padding: 1rem .5rem;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap:1rem;
+    width:20vw;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+}
+.massage:hover{
+    scale:1.05;
+    box-shadow: 0 0 10px grey;
+}
+.pedicure:hover{
+    scale:1.05;
+    box-shadow: 0 0 10px grey;
+}
+.facial:hover{
+    scale:1.05;
+    box-shadow: 0 0 10px grey;
+}
+.makeup:hover{
+    scale:1.05;
+    box-shadow: 0 0 10px grey;
+}
+
+#contact{
+    display: flex;
+    height:auto;
+    padding:1rem 0;
+    width:95%;
+    margin:0 auto;
+    gap:1rem;
+
+
+}
+.contact-form{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    gap:.5rem;
+}
+.contact-form label{
+    font-size: 1.5em;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+.contact-form input,textarea{
+    padding:.5rem 1rem;
+}
+.contact-form textarea{
+    resize: none;
+}
+label .mail,label .sub, label .mess{
+    vertical-align: middle;
+}
+.submit{
+    width:10%;
+    padding: .25rem .5rem;
+    border: none;
+    background-color: grey;
+    color:white;
+    cursor: pointer;
+}
+.submit:active{
+    scale:.9;
+}
+.contact-socials{
+    width: 50%;
+}
+.links img{
+    cursor: pointer;
+    scale:.85;
+    transition: all 500ms;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+}
+.links img:hover{
+    scale:1;
+}
+.contact-socials h1{
+    text-align: center;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    margin-bottom: 1rem;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+}
+.female,.home, .phone,.gmail{
+    vertical-align: middle;
+}
+.personal-info{
+    border: 1px solid black;
+    padding: .5rem 1rem;
+    border-radius: 0 20px 0 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1rem;
+    -webkit-border-radius: 0 20px 0 20px;
+    -moz-border-radius: 0 20px 0 20px;
+    -ms-border-radius: 0 20px 0 20px;
+    -o-border-radius: 0 20px 0 20px;
+}
+.personal-info *{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+footer{
+    text-align: center;
+    background-color: #000;
+    font-family: 'Dancing Script';
+    font-size: 1.5em;
+    color:white;
+    padding:.5rem 0 0 0;
+}
+footer span{
+    color:gold;
+}
+@media(min-width:768px)and (max-width:1280px){
+    header{
+        background-image: url(../assets/mobilee.jpg);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      border: 1px solid black; /* Add the desired border style */
+    }
+
+    .desciption{
+        transform:translateY(-80px);
+        -webkit-transform:translateY(-80px);
+        -moz-transform:translateY(-80px);
+        -ms-transform:translateY(-80px);
+        -o-transform:translateY(-80px);
+    }
+    nav ul li a{
+        color:white;
+    }
+
+    nav span{
+        border: 1px solid black;
+    }
+    
+    .web-title{
+        width:100%;
+        margin-left: 0;
+    }
+    .web-title *{
+        color:white;
+    }
+    .web-title p{
+        text-shadow: 1px 1px black;
+    }
+    #about{
+        flex-direction: column;
+        padding-top: 0;
+    }
+    .pic2{
+        margin-top: .5rem;
+    }
+    .about-pics, .about-desc{
+        width:95%;
+        margin:0 auto;
+        text-align: justify;
+    }
+    .about-pics{
+        width:100%;
+    }
+    .pic1, .pic2{
+        width:100%;
+        border-radius: 0;
+        margin: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        height:50vh;
+        background-size: cover;
+    }
+    .pic1 p, .pic2 p{
+        font-size: 2.5em;
+        text-align: center;
+        padding:0 .5rem;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+
+    }
+    #contact{
+        flex-direction:column-reverse;
+    }
+    .contact-form,.contact-socials{
+        width:100%;
+    }
+    textarea{
+        margin-top: .25rem;
+        margin-bottom: .25rem;
+    }
+    #contact button{
+        width:20%;
+    }
+    .offers{
+        flex-direction: column;
+
+    }
+    .massage, .facial, .pedicure, .makeup{
+        width:90%;
+        margin: 0 auto;
+    }
+    #services img{
+        width:50vw;
+    }
+    #services p{
+        padding: 0 .5rem;
+    }
+
+
+
+    
+}
+
+
+@media(max-width:428px){
+    header{
+        background-image: url(../assets/mobilee.jpg);
+    }
+    .com-name{
+        display: block;
+        font-family: 'Dancing Script', Arial, Helvetica, sans-serif;
+        font-size: 2.5em;
+        text-align: center;
+        color:white;
+    }
+    .burger{
+        position: fixed;
+        top:2.5%;
+        right:5%;
+        display: flex;
+        z-index: 999;
+    }
+    .desciption{
+        transform:translateY(-80px);
+        -webkit-transform:translateY(-80px);
+        -moz-transform:translateY(-80px);
+        -ms-transform:translateY(-80px);
+        -o-transform:translateY(-80px);
+    }
+
+    nav span{
+        border: 1px solid black;
+    }
+    nav ul{
+        position: fixed;
+        height: 100vh;
+        width:100%;
+        background-color: #142d4c;
+        z-index: 99;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 500ms;
+        -webkit-transition: all 500ms;
+        -moz-transition: all 500ms;
+        -ms-transition: all 500ms;
+        -o-transition: all 500ms;
+        transform: translateX(100vw);
+        -webkit-transform: translateX(100vw);
+        -moz-transform: translateX(100vw);
+        -ms-transform: translateX(100vw);
+        -o-transform: translateX(100vw);
+}
+    nav ul li a {
+        color:white;
+    }
+    .web-title{
+        width:100%;
+        margin-left: 0;
+    }
+    .web-title *{
+        color:white;
+    }
+    #about{
+        flex-direction: column;
+        padding-top: 0;
+    }
+    .pic2{
+        margin-top: .5rem;
+    }
+    .about-pics, .about-desc{
+        width:95%;
+        margin:0 auto;
+        text-align: justify;
+    }
+    .about-pics{
+        width:100%;
+    }
+    .pic1, .pic2{
+        width:100%;
+        border-radius: 0;
+        margin: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        height:50vh;
+        background-size: cover;
+    }
+    .pic1 p, .pic2 p{
+        font-size: 2.5em;
+        text-align: center;
+        padding:0 .5rem;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+
+    }
+    #contact{
+        flex-direction:column-reverse;
+    }
+    .contact-form,.contact-socials{
+        width:100%;
+    }
+    textarea{
+        margin-top: .25rem;
+        margin-bottom: .25rem;
+    }
+    #contact button{
+        width:20%;
+    }
+    .offers{
+        flex-direction: column;
+
+    }
+    .massage, .facial, .pedicure, .makeup{
+        width:90%;
+        margin: 0 auto;
+    }
+    #services img{
+        width:50vw;
+    }
+    #services p{
+        padding: 0 .5rem;
+    }
+
+
+    
+}
